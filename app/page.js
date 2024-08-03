@@ -137,7 +137,8 @@ export default function Home() {
     );
     
     setPantryItems(updatedItems);
-    const dataToSet = {};
+   
+ const dataToSet = {};
     dataToSet[key] = updatedName;
     set(ref(database, cookies.get('clientID')), dataToSet)
     .then(() => {
@@ -146,6 +147,7 @@ export default function Home() {
     .catch((error) => {
       console.error('Error saving data: ', error);
     });
+   
   };
   const handleInputChange = (e) => {
     setData(e.target.value);

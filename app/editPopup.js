@@ -46,7 +46,7 @@ export function EditPopup({open,close,handleEdit,pantryItemName,pantryItemKey}){
             variant="contained"
             sx={{ width: '40%', marginTop: '15px' }}
             onClick={() => {
-             handleEdit(pantryItemKey);}
+             handleEdit(pantryItemKey,valueState);}
               }
           >
             Submit
