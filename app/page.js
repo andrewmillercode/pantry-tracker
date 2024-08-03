@@ -138,9 +138,8 @@ export default function Home() {
     
     setPantryItems(updatedItems);
    
- const dataToSet = {};
-    dataToSet[key] = updatedName;
-    set(ref(database, cookies.get('clientID')), dataToSet)
+   
+    set(ref(database, cookies.get('clientID')+"/"+key), updatedName)
     .then(() => {
       console.log('Data saved successfully!');
     })
